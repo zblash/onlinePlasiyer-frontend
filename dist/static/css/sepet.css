@@ -1,0 +1,111 @@
+body{
+    color: white !important;
+ }
+ 
+ 
+ .bag{
+     margin-top: 80px;
+     text-align: center;
+     border-top:1px dashed #ced6e0;
+     margin-bottom: 60px;
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+     width: 300px;
+     margin-left: auto;
+     margin-right: auto;
+     border-bottom:1px dashed #ced6e0;
+     height: 60px;
+
+ }
+
+ .bag h5{
+     text-align: center;
+     font-size: 25px;
+     font-weight: bolder;
+ }
+
+.bag img{
+   margin-bottom:20px;
+   margin-top: 5px;
+
+}
+
+ .table table-striped th{
+     color: white !important;
+ }
+
+ table th {
+     font-size: 13px;
+     font-weight: 200;
+ }
+
+ table.table thead th {
+     border-top: 1px; 
+ }
+
+ .table td, .table th {
+     text-align: center;
+ }
+
+.right_section{
+     text-align: center;
+     color: white;
+ }
+
+.right_section h5{ float: left;}
+
+.day{
+     margin-right: 20px;
+     margin-left:10px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     float: right;
+ } 
+
+ .day_table{font-size: 20px;}
+
+.day_box{
+     float: left;
+     width: 150px;
+    line-height: 30px;
+ }
+
+.store{
+    margin-top:100px;
+    color: white;
+
+}
+
+.store h5{
+    background: #15202b;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.tabloo{ 
+     color: black;
+     width: 100%;
+     background-color: #1e272e;
+     text-align: center;
+     margin-bottom:20px;
+}
+
+.tabloo tr td{
+    border:2px solid #485460;
+    color: white;
+    padding: 0%;
+}
+
+.dene td{
+    background: #1e272e;
+    width: 100px;
+}
+
+.header_table{
+    background: #1e272e;
+    height: 40px;
+}
+
+.box_input{    width: 100%;
+}
+

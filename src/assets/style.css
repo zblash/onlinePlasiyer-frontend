@@ -1,0 +1,168 @@
+body{
+     margin: 0;
+     padding: 0;
+     background: #15202b;
+  }
+
+/**top menu****/
+
+  a.navbar-brand{    
+     font-family: 'Cinzel', serif;
+     color: white;
+  }
+  .nav-link{color:white;}
+  .search_btn{
+     border: 1px solid rgb(53, 17, 255);
+     color: white;
+     background-color:#0c2461;
+     height: 35px;
+     border-radius: 5px;
+     width: 70px;
+     box-shadow: #1da1f2;
+      -webkit-transition: 0.7s;
+      transition: 0.7s;
+      margin-top:3px;
+  }
+
+  .search_btn:hover{
+     background-color: white;
+     color: #007BFF;
+      -webkit-transition: 0.7s;
+      transition: 0.7s;
+  }
+ 
+ .card-body {
+    padding:0px; 
+    text-align: center;
+        }
+
+ .card-body p{
+     color: #000;
+     font-family: 'Cinzel', serif;
+  }
+
+ .card {
+     -webkit-transition: 0.3s;
+     transition: 0.3s;
+ }
+
+ .card:hover{
+     -moz-box-shadow:    3px 3px 3px #0F52BA;
+     -webkit-box-shadow: 3px 3px 3px #0F52BA;
+     box-shadow:         3px 3px 3px #0F52BA;
+     -webkit-transition: 0.3s;
+     transition: 0.3s;
+     background-color: #f7f1e3; 
+      
+  }
+
+ .card-text{
+     height: 45px;
+ }
+  
+ .category{
+     margin-top: 50px;
+     
+     text-align: center;
+     border-top:1px solid #ced6e0;
+     padding-top: 60px;
+     padding-bottom: 60px;
+
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+
+ }
+
+ .category h5{
+     float: left;
+ }
+
+ .dropdown_cat{
+     float: right;
+     margin-top: -16px;
+ }
+ .product_box{
+     margin-left: 10px;
+     padding: 15px;
+     width: 330px;
+     float: left;
+     font-family: Arial, Helvetica, sans-serif;
+
+  }
+ 
+  .tablo{ height: 105px;
+    color: white;
+    text-align: center;
+ }
+
+ .information_box{
+     float: right;
+     text-align: left;
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+ .information_box h4{
+     font-size: 18px;
+     line-height: 30px;
+     font-family: 'Poiret One', cursive;
+     font-weight: 100;
+     
+
+ }
+
+ .value_table{
+     float: left;
+     margin-left: 80px;
+ }
+
+ .value_box{
+     float: right;
+     margin-left: 10px;
+     margin-right: 120px;
+     margin-top: 10px;
+
+ }
+
+.add_repository{
+    border: 1px solid #2d3436;
+    color:white;
+    background-color:#1e272e;
+    height: 35px;
+    border-radius: 5px;
+    box-shadow: #0c2461;
+ }
+
+ .add_repository:hover{
+    background-color: #2f3640;
+    border: 1px solid white;
+ }
+
+ .right{
+     padding-top:20px;
+ }
+
+ .page_bar ul {
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .page_bar ul li{
+     border:1px solid gray;
+     border-radius: 5px;
+     color:#0c2461;
+ }
+ .page_bar ul li a{
+    color:#0c2461;
+}
+
+ .page-link{
+     color: #fff !important;
+     height: 100%;
+ }
+
+.page-link:hover{
+    color: #4285f4 !important;
+    background-color: #fff !important;
+}
