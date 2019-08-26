@@ -15,6 +15,7 @@ export const cart = {
       apiService.addToCart({ id, quantity })
         .then(
           response => {
+            dispatch('alert/success', "Urun Sepete Eklendi.", { root: true });
             dispatch('getCart');
           }
         )

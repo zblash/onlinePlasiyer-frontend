@@ -16,7 +16,15 @@ export class APIService{
   }
 
   login(data) {
-    return axios.post(URL, data);
+    let url = URL+"/signin";
+    return axios.post(url, data);
+  }
+
+  getAllUsers(){
+    let token = authHeader();
+    let url = API_URL+"/admin/users";
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+    return axios.get(url);
   }
 
   addProductSpec(data){
@@ -38,6 +46,60 @@ export class APIService{
     }
     form_data.append('uploadfile', img, img.name);
 
+    return axios.post(url,form_data);
+  }
+
+  updateCategory(id,data,img){
+    let token = authHeader();
+    let url = `${API_URL}/admin/categories/update/${id}`;
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+
+    let form_data = new FormData();
+
+    for ( let key in data ) {
+      form_data.append(key, data[key]);
+    }
+    console.log(img);
+    if (img) {
+      form_data.append('uploadfile', img, img.name);
+    }
+
+    return axios.put(url,form_data);
+  }
+
+  deleteCategory(id){
+    let token = authHeader();
+    let url = `${API_URL}/admin/categories/delete/${id}`;
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+    return axios.delete(url);
+  }
+
+  getAllCategories(){
+    let token = authHeader();
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+    let url = API_URL+"/admin/categories";
+    return axios.get(url);
+  }
+
+  getCategories(){
+    let token = authHeader();
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+    let url = API_URL+"/categories?filter=true&sub=false";
+    return axios.get(url,{ headers: { 'Content-Type': 'application/json' } });
+  }
+
+  addCategory(data,img) {
+    let token = authHeader();
+    let url = API_URL+"/admin/categories/create";
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+
+    let form_data = new FormData();
+
+    for ( let key in data ) {
+      form_data.append(key, data[key]);
+    }
+    form_data.append('uploadfile', img, img.name);
+
     const json = JSON.stringify(data);
     const blob = new Blob([json], {
       type: 'application/json'
@@ -46,13 +108,6 @@ export class APIService{
     formData.append("document", blob);
 
     return axios.post(url,form_data);
-  }
-
-  getCategories(){
-    let token = authHeader();
-    axios.defaults.headers.common = {'Authorization': `${token}`}
-    let url = API_URL+"/categories?filter=true&sub=false";
-    return axios.get(url,{ headers: { 'Content-Type': 'application/json' } });
   }
 
   getProductsByCategory(id){
