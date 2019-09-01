@@ -90,7 +90,7 @@
             <router-link :to="{path: '/'}" class="nav-link">Anasayfa</router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{name: 'Cart'}" class="nav-link">Cikis Yap</router-link>
+            <a  class="nav-link" @click.prevent="logout">Cikis Yap</a>
           </li>
         </ul>
       </div>
@@ -142,6 +142,12 @@
 
       this.$store.dispatch('cart/getCart');
     },
+      methods: {
+        logout(){
+            localStorage.removeItem('user');
+            window.location.reload()
+        }
+      }
   }
 </script>
 
