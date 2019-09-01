@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from "../helpers/auth-helper";
-const URL = 'http://localhost:8080';
-const API_URL = 'http://localhost:8080/api';
+const URL = 'https://onlineplasiyer-backend.herokuapp.com';
+const API_URL = 'https://onlineplasiyer-backend.herokuapp.com/api';
 
 export class APIService{
 
