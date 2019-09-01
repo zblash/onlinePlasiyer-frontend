@@ -132,6 +132,9 @@
       }
     },
     mounted() {
+        if (this.user.role === 'MERCHANT' && this.user.activeStates.length < 1){
+            this.$router.push({ name: 'Bills'});
+        }
       apiService.getCategories()
         .then(response => {
           this.categories = response.data;

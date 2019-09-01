@@ -20,6 +20,11 @@ export class APIService{
     return axios.post(url, data);
   }
 
+  register(data) {
+    let url = URL+"/sign-up";
+    return axios.post(url, data);
+  }
+
   getAllUsers(){
     let token = authHeader();
     let url = API_URL+"/admin/users";

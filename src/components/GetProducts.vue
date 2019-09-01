@@ -58,7 +58,6 @@
       },
       methods: {
         fetchData() {
-          console.log(this.$route.params.id)
           apiService.getProductsByCategory(this.$route.params.id)
             .then(response => {
               this.products = response.data;

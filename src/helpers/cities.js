@@ -1,0 +1,1378 @@
+let cities =[
+  {
+    city:"Adana",
+    state:[
+      "Aladağ",
+      "Ceyhan",
+      "Çukurova",
+      "Feke",
+"İmamoğlu",
+  "Karaisalı",
+  "Karataş",
+  "Kozan",
+  "Pozantı",
+  "Saimbeyli",
+  "Sarıçam",
+  "Seyhan",
+  "Tufanbeyli",
+  "Yumurtalık",
+  "Yüreğir"
+]
+},
+{
+  city:"Adıyaman",
+    state:[
+  "Adıyaman",
+  "Besni",
+  "Çelikhan",
+  "Gerger",
+  "Gölbaşı",
+  "Kâhta",
+  "Samsat",
+  "Sincik",
+  "Tut"
+]
+},
+{
+  city:"Afyonkarahisar",
+    state:[
+  "Afyonkarahisar",
+  "Başmakçı",
+  "Bayat",
+  "Bolvadin",
+  "Çay",
+  "Çobanlar",
+  "Dazkırı",
+  "Dinar",
+  "Emirdağ",
+  "Evciler",
+  "Hocalar",
+  "İhsaniye",
+  "İscehisar",
+  "Kızılören",
+  "Sandıklı",
+  "Sinanpaşa",
+  "Sultandağı",
+  "Şuhut"
+]
+},
+{
+  city:"Ağrı",
+    state:[
+  "Ağrı",
+  "Diyadin",
+  "Doğubayazıt",
+  "Eleşkirt",
+  "Hamur",
+  "Patnos",
+  "Taşlıçay",
+  "Tutak"
+]
+},
+{
+  city:"Aksaray",
+    state:[
+  "Ağaçören",
+  "Aksaray",
+  "Eskil",
+  "Gülağaç",
+  "Güzelyurt",
+  "Ortaköy",
+  "Sarıyahşi"
+]
+},
+{
+  city:"Amasya",
+    state:[
+  "Amasya",
+  "Göynücek",
+  "Gümüşhacıköy",
+  "Hamamözü",
+  "Merzifon",
+  "Suluova",
+  "Taşova"
+]
+},
+{
+  city:"Ankara",
+    state:[
+  "Akyurt",
+  "Altındağ",
+  "Ayaş",
+  "Balâ",
+  "Beypazarı",
+  "Çamlıdere",
+  "Çankaya",
+  "Çubuk",
+  "Elmadağ",
+  "Etimesgut",
+  "Evren",
+  "Gölbaşı",
+  "Güdül",
+  "Haymana",
+  "Kalecik",
+  "Kahramankazan",
+  "Keçiören",
+  "Kızılcahamam",
+  "Mamak",
+  "Nallıhan",
+  "Polatlı",
+  "Pursaklar",
+  "Sincan",
+  "Şereflikoçhisar",
+  "Yenimahalle"
+]
+},
+{
+  city:"Antalya",
+    state:[
+  "Akseki",
+  "Aksu",
+  "Alanya",
+  "Döşemealtı",
+  "Elmalı",
+  "Finike",
+  "Gazipaşa",
+  "Gündoğmuş",
+  "İbradı",
+  "Demre",
+  "Kaş",
+  "Kemer",
+  "Kepez",
+  "Konyaaltı",
+  "Korkuteli",
+  "Kumluca",
+  "Manavgat",
+  "Muratpaşa",
+  "Serik"
+]
+},
+{
+  city:"Ardahan",
+    state:[
+  "Ardahan",
+  "Çıldır",
+  "Damal",
+  "Göle",
+  "Hanak",
+  "Posof"
+]
+},
+{
+  city:"Artvin",
+    state:[
+  "Ardanuç",
+  "Arhavi",
+  "Artvin",
+  "Borçka",
+  "Hopa",
+  "Murgul",
+  "Şavşat",
+  "Yusufeli"
+]
+},
+{
+  city:"Aydın",
+    state:[
+  "Bozdoğan",
+  "Buharkent",
+  "Çine",
+  "Didim",
+  "Efeler",
+  "Germencik",
+  "İncirliova",
+  "Karacasu",
+  "Karpuzlu",
+  "Koçarlı",
+  "Köşk",
+  "Kuşadası",
+  "Kuyucak",
+  "Nazilli",
+  "Söke",
+  "Sultanhisar",
+  "Yenipazar"
+]
+},
+{
+  city:"Balıkesir",
+    state:[
+  "Altıeylül",
+  "Ayvalık",
+  "Balya",
+  "Bandırma",
+  "Bigadiç",
+  "Burhaniye",
+  "Dursunbey",
+  "Edremit",
+  "Erdek",
+  "Gömeç",
+  "Gönen",
+  "Havran",
+  "İvrindi",
+  "Karesi",
+  "Kepsut",
+  "Manyas",
+  "Marmara",
+  "Savaştepe",
+  "Sındırgı",
+  "Susurluk"
+]
+},
+{
+  city:"Bartın",
+    state:[
+  "Amasra",
+  "Bartın",
+  "Kurucaşile",
+  "Ulus"
+]
+},
+{
+  city:"Batman",
+    state:[
+  "Batman",
+  "Beşiri",
+  "Gercüş",
+  "Hasankeyf",
+  "Kozluk",
+  "Sason"
+]
+},
+{
+  city:"Bayburt",
+    state:[
+  "Aydıntepe",
+  "Bayburt (İl merkezi}",
+  "Demirözü"
+]
+},
+{
+  city:"Bilecik",
+    state:[
+  "Bilecik",
+  "Bozüyük",
+  "Gölpazarı",
+  "İnhisar",
+  "Osmaneli",
+  "Pazaryeri",
+  "Söğüt",
+  "Yenipazar"
+]
+},
+{
+  city:"Bingöl",
+    state:[
+  "Adaklı",
+  "Bingöl",
+  "Genç",
+  "Karlıova",
+  "Kiğı",
+  "Solhan",
+  "Yayladere",
+  "Yedisu"
+]
+},
+{
+  city:"Bitlis",
+    state:[
+  "Adilcevaz",
+  "Ahlat",
+  "Bitlis",
+  "Güroymak",
+  "Hizan",
+  "Mutki",
+  "Tatvan"
+]
+},
+{
+  city:"Bolu",
+    state:[
+  "Bolu",
+  "Dörtdivan",
+  "Gerede",
+  "Göynük",
+  "Kıbrıscık",
+  "Mengen",
+  "Mudurnu",
+  "Seben",
+  "Yeniçağa"
+]
+},
+{
+  city:"Burdur",
+    state:[
+  "Ağlasun",
+  "Altınyayla",
+  "Bucak",
+  "Burdur",
+  "Çavdır",
+  "Çeltikçi",
+  "Gölhisar",
+  "Karamanlı",
+  "Kemer",
+  "Tefenni",
+  "Yeşilova"
+]
+},
+{
+  city:"Bursa",
+    state:[
+  "Büyükorhan",
+  "Gemlik",
+  "Gürsu",
+  "Harmancık",
+  "İnegöl",
+  "İznik",
+  "Karacabey",
+  "Keles",
+  "Kestel",
+  "Mudanya",
+  "Mustafakemalpaşa",
+  "Nilüfer",
+  "Orhaneli",
+  "Orhangazi",
+  "Osmangazi",
+  "Yenişehir",
+  "Yıldırım"
+]
+},
+{
+  city:"Çanakkale",
+    state:[
+  "Ayvacık",
+  "Bayramiç",
+  "Biga",
+  "Bozcaada",
+  "Çan",
+  "Çanakkale",
+  "Eceabat",
+  "Ezine",
+  "Gelibolu",
+  "Gökçeada",
+  "Lapseki",
+  "Yenice"
+]
+},
+{
+  city:"Çankırı",
+    state:[
+  "Atkaracalar",
+  "Bayramören",
+  "Çankırı",
+  "Çerkeş",
+  "Eldivan",
+  "Ilgaz",
+  "Kızılırmak",
+  "Korgun",
+  "Kurşunlu",
+  "Orta",
+  "Şabanözü",
+  "Yapraklı"
+]
+},
+{
+  city:"Çorum",
+    state:[
+  "Alaca",
+  "Bayat",
+  "Boğazkale",
+  "Çorum",
+  "Dodurga",
+  "İskilip",
+  "Kargı",
+  "Laçin",
+  "Mecitözü",
+  "Oğuzlar",
+  "Ortaköy",
+  "Osmancık",
+  "Sungurlu",
+  "Uğurludağ"
+]
+},
+{
+  city:"Denizli",
+    state:[
+  "Acıpayam",
+  "Babadağ",
+  "Baklan",
+  "Bekilli",
+  "Beyağaç",
+  "Bozkurt",
+  "Buldan",
+  "Çal",
+  "Çameli",
+  "Çardak",
+  "Çivril",
+  "Güney",
+  "Honaz",
+  "Kale",
+  "Merkezefendi",
+  "Pamukkale",
+  "Sarayköy",
+  "Serinhisar",
+  "Tavas"
+]
+},
+{
+  city:"Diyarbakır",
+    state:[
+  "Bağlar",
+  "Bismil",
+  "Çermik",
+  "Çınar",
+  "Çüngüş",
+  "Dicle",
+  "Eğil",
+  "Ergani",
+  "Hani",
+  "Hazro",
+  "Kayapınar",
+  "Kocaköy",
+  "Kulp",
+  "Lice",
+  "Silvan",
+  "Sur",
+  "Yenişehir"
+]
+},
+{
+  city:"Düzce",
+    state:[
+  "Akçakoca",
+  "Cumayeri",
+  "Çilimli",
+  "Düzce",
+  "Gölyaka",
+  "Gümüşova",
+  "Kaynaşlı",
+  "Yığılca"
+]
+},
+{
+  city:"Edirne",
+    state:[
+  "Enez",
+  "Havsa",
+  "İpsala",
+  "Keşan",
+  "Lalapaşa",
+  "Meriç",
+  "Merkez",
+  "Süloğlu",
+  "Uzunköprü"
+]
+},
+{
+  city:"Elâzığ",
+    state:[
+  "Ağın",
+  "Alacakaya",
+  "Arıcak",
+  "Baskil",
+  "Elâzığ",
+  "Karakoçan",
+  "Keban",
+  "Kovancılar",
+  "Maden",
+  "Palu",
+  "Sivrice"
+]
+},
+{
+  city:"Erzincan",
+    state:[
+  "Çayırlı",
+  "Erzincan",
+  "İliç",
+  "Kemah",
+  "Kemaliye",
+  "Otlukbeli",
+  "Refahiye",
+  "Tercan",
+  "Üzümlü"
+]
+},
+{
+  city:"Erzurum",
+    state:[
+  "Aşkale",
+  "Aziziye",
+  "Çat",
+  "Hınıs",
+  "Horasan",
+  "İspir",
+  "Karaçoban",
+  "Karayazı",
+  "Köprüköy",
+  "Narman",
+  "Oltu",
+  "Olur",
+  "Palandöken",
+  "Pasinler",
+  "Pazaryolu",
+  "Şenkaya",
+  "Tekman",
+  "Tortum",
+  "Uzundere",
+  "Yakutiye"
+]
+},
+{
+  city:"Eskişehir",
+    state:[
+  "Alpu",
+  "Beylikova",
+  "Çifteler",
+  "Günyüzü",
+  "Han",
+  "İnönü",
+  "Mahmudiye",
+  "Mihalgazi",
+  "Mihalıççık",
+  "Odunpazarı",
+  "Sarıcakaya",
+  "Seyitgazi",
+  "Sivrihisar",
+  "Tepebaşı"
+]
+},
+{
+  city:"Gaziantep",
+    state:[
+  "Araban",
+  "İslahiye",
+  "Karkamış",
+  "Nizip",
+  "Nurdağı",
+  "Oğuzeli",
+  "Şahinbey",
+  "Şehitkâmil",
+  "Yavuzeli"
+]
+},
+{
+  city:"Giresun",
+    state:[
+  "Alucra",
+  "Bulancak",
+  "Çamoluk",
+  "Çanakçı",
+  "Dereli",
+  "Doğankent",
+  "Espiye",
+  "Eynesil",
+  "Giresun",
+  "Görele",
+  "Güce",
+  "Keşap",
+  "Piraziz",
+  "Şebinkarahisar",
+  "Tirebolu",
+  "Yağlıdere"
+]
+},
+{
+  city:"Gümüşhane",
+    state:[
+  "Gümüşhane",
+  "Kelkit",
+  "Köse",
+  "Kürtün",
+  "Şiran",
+  "Torul"
+]
+},
+{
+  city:"Hakkâri",
+    state:[
+  "Çukurca",
+  "Hakkâri",
+  "Şemdinli",
+  "Yüksekova"
+]
+},
+{
+  city:"Hatay",
+    state:[
+  "Altınözü",
+  "Antakya",
+  "Arsuz",
+  "Belen",
+  "Defne",
+  "Dörtyol",
+  "Erzin",
+  "Hassa",
+  "İskenderun",
+  "Kırıkhan",
+  "Kumlu",
+  "Payas",
+  "Reyhanlı",
+  "Samandağ",
+  "Yayladağı"
+]
+},
+{
+  city:"Iğdır",
+    state:[
+  "Aralık",
+  "Iğdır",
+  "Karakoyunlu",
+  "Tuzluca"
+]
+},
+{
+  city:"Isparta",
+    state:[
+  "Aksu",
+  "Atabey",
+  "Eğirdir",
+  "Gelendost",
+  "Gönen",
+  "Isparta",
+  "Keçiborlu",
+  "Senirkent",
+  "Sütçüler",
+  "Şarkikaraağaç",
+  "Uluborlu",
+  "Yalvaç",
+  "Yenişarbademli"
+]
+},
+{
+  city:"İstanbul",
+    state:[
+  "Adalar",
+  "Arnavutköy",
+  "Ataşehir",
+  "Avcılar",
+  "Bağcılar",
+  "Bahçelievler",
+  "Bakırköy",
+  "Başakşehir",
+  "Bayrampaşa",
+  "Beşiktaş",
+  "Beykoz",
+  "Beylikdüzü",
+  "Beyoğlu",
+  "Büyükçekmece",
+  "Çatalca",
+  "Çekmeköy",
+  "Esenler",
+  "Esenyurt",
+  "Eyüp",
+  "Fatih",
+  "Gaziosmanpaşa",
+  "Güngören",
+  "Kadıköy",
+  "Kağıthane",
+  "Kartal",
+  "Küçükçekmece",
+  "Maltepe",
+  "Pendik",
+  "Sancaktepe",
+  "Sarıyer",
+  "Silivri",
+  "Sultanbeyli",
+  "Sultangazi",
+  "Şile",
+  "Şişli",
+  "Tuzla",
+  "Ümraniye",
+  "Üsküdar",
+  "Zeytinburnu"
+]
+},
+{
+  city:"İzmir",
+    state:[
+  "Aliağa",
+  "Balçova",
+  "Bayındır",
+  "Bayraklı",
+  "Bergama",
+  "Beydağ",
+  "Bornova",
+  "Buca",
+  "Çeşme",
+  "Çiğli",
+  "Dikili",
+  "Foça",
+  "Gaziemir",
+  "Güzelbahçe",
+  "Karabağlar",
+  "Karaburun",
+  "Karşıyaka",
+  "Kemalpaşa",
+  "Kınık",
+  "Kiraz",
+  "Konak",
+  "Menderes",
+  "Menemen",
+  "Narlıdere",
+  "Ödemiş",
+  "Seferihisar",
+  "Selçuk",
+  "Tire",
+  "Torbalı",
+  "Urla"
+]
+},
+{
+  city:"Kahramanmaraş",
+    state:[
+  "Afşin",
+  "Andırın",
+  "Çağlayancerit",
+  "Dulkadiroğlu",
+  "Ekinözü",
+  "Elbistan",
+  "Göksun",
+  "Nurhak",
+  "Onikişubat",
+  "Pazarcık",
+  "Türkoğlu"
+]
+},
+{
+  city:"Karabük",
+    state:[
+  "Eflani",
+  "Eskipazar",
+  "Karabük",
+  "Ovacık",
+  "Safranbolu",
+  "Yenice"
+]
+},
+{
+  city:"Karaman",
+    state:[
+  "Ayrancı",
+  "Başyayla",
+  "Ermenek",
+  "Karaman",
+  "Kazımkarabekir",
+  "Sarıveliler"
+]
+},
+{
+  city:"Kars",
+    state:[
+  "Akyaka",
+  "Arpaçay",
+  "Digor",
+  "Kağızman",
+  "Kars",
+  "Sarıkamış",
+  "Selim",
+  "Susuz"
+]
+},
+{
+  city:"Kastamonu",
+    state:[
+  "Abana",
+  "Ağlı",
+  "Araç",
+  "Azdavay",
+  "Bozkurt",
+  "Cide",
+  "Çatalzeytin",
+  "Daday",
+  "Devrekani",
+  "Doğanyurt",
+  "Hanönü",
+  "İhsangazi",
+  "İnebolu",
+  "Kastamonu",
+  "Küre",
+  "Pınarbaşı",
+  "Seydiler",
+  "Şenpazar",
+  "Taşköprü",
+  "Tosya"
+]
+},
+{
+  city:"Kayseri",
+    state:[
+  "Akkışla",
+  "Bünyan",
+  "Develi",
+  "Felahiye",
+  "Hacılar",
+  "İncesu",
+  "Kocasinan",
+  "Melikgazi",
+  "Özvatan",
+  "Pınarbaşı",
+  "Sarıoğlan",
+  "Sarız",
+  "Talas",
+  "Tomarza",
+  "Yahyalı",
+  "Yeşilhisar"
+]
+},
+{
+  city:"Kırıkkale",
+    state:[
+  "Bahşılı",
+  "Balışeyh",
+  "Çelebi",
+  "Delice",
+  "Karakeçili",
+  "Keskin",
+  "Kırıkkale",
+  "Sulakyurt",
+  "Yahşihan"
+]
+},
+{
+  city:"Kırklareli",
+    state:[
+  "Babaeski",
+  "Demirköy",
+  "Kırklareli",
+  "Kofçaz",
+  "Lüleburgaz",
+  "Pehlivanköy",
+  "Pınarhisar",
+  "Vize"
+]
+},
+{
+  city:"Kırşehir",
+    state:[
+  "Akçakent",
+  "Akpınar",
+  "Boztepe",
+  "Çiçekdağı",
+  "Kaman",
+  "Kırşehir",
+  "Mucur"
+]
+},
+{
+  city:"Kilis",
+    state:[
+  "Elbeyli",
+  "Kilis",
+  "Musabeyli",
+  "Polateli"
+]
+},
+{
+  city:"Kocaeli",
+    state:[
+  "Başiskele",
+  "Çayırova",
+  "Darıca",
+  "Derince",
+  "Dilovası",
+  "Gebze",
+  "Gölcük",
+  "İzmit",
+  "Kandıra",
+  "Karamürsel",
+  "Kartepe",
+  "Körfez"
+]
+},
+{
+  city:"Konya",
+    state:[
+  "Ahırlı",
+  "Akören",
+  "Akşehir",
+  "Altınekin",
+  "Beyşehir",
+  "Bozkır",
+  "Cihanbeyli",
+  "Çeltik",
+  "Çumra",
+  "Derbent",
+  "Derebucak",
+  "Doğanhisar",
+  "Emirgazi",
+  "Ereğli",
+  "Güneysınır",
+  "Hadım",
+  "Halkapınar",
+  "Hüyük",
+  "Ilgın",
+  "Kadınhanı",
+  "Karapınar",
+  "Karatay",
+  "Kulu",
+  "Meram",
+  "Sarayönü",
+  "Selçuklu",
+  "Seydişehir",
+  "Taşkent",
+  "Tuzlukçu",
+  "Yalıhüyük",
+  "Yunak"
+]
+},
+{
+  city:"Kütahya",
+    state:[
+  "Altıntaş",
+  "Aslanapa",
+  "Çavdarhisar",
+  "Domaniç",
+  "Dumlupınar",
+  "Emet",
+  "Gediz",
+  "Hisarcık",
+  "Kütahya",
+  "Pazarlar",
+  "Şaphane",
+  "Simav",
+  "Tavşanlı"
+]
+},
+{
+  city:"Malatya",
+    state:[
+  "Akçadağ",
+  "Arapgir",
+  "Arguvan",
+  "Battalgazi",
+  "Darende",
+  "Doğanşehir",
+  "Doğanyol",
+  "Hekimhan",
+  "Kale",
+  "Kuluncak",
+  "Pütürge",
+  "Yazıhan",
+  "Yeşilyurt"
+]
+},
+{
+  city:"Manisa",
+    state:[
+  "Ahmetli",
+  "Akhisar",
+  "Alaşehir",
+  "Demirci",
+  "Gölmarmara",
+  "Gördes",
+  "Kırkağaç",
+  "Köprübaşı",
+  "Kula",
+  "Salihli",
+  "Sarıgöl",
+  "Saruhanlı",
+  "Selendi",
+  "Soma",
+  "Şehzadeler",
+  "Turgutlu",
+  "Yunusemre"
+]
+},
+{
+  city:"Mardin",
+    state:[
+  "Artuklu",
+  "Dargeçit",
+  "Derik",
+  "Kızıltepe",
+  "Mazıdağı",
+  "Midyat",
+  "Nusaybin",
+  "Ömerli",
+  "Savur",
+  "Yeşilli"
+]
+},
+{
+  city:"Mersin",
+    state:[
+  "Akdeniz",
+  "Anamur",
+  "Aydıncık",
+  "Bozyazı",
+  "Çamlıyayla",
+  "Erdemli",
+  "Gülnar",
+  "Mezitli",
+  "Mut",
+  "Silifke",
+  "Tarsus",
+  "Toroslar",
+  "Yenişehir"
+]
+},
+{
+  city:"Muğla",
+    state:[
+  "Bodrum",
+  "Dalaman",
+  "Datça",
+  "Fethiye",
+  "Kavaklıdere",
+  "Köyceğiz",
+  "Marmaris",
+  "Menteşe",
+  "Milas",
+  "Ortaca",
+  "Seydikemer",
+  "Ula",
+  "Yatağan"
+]
+},
+{
+  city:"Muş",
+    state:[
+  "Bulanık",
+  "Hasköy",
+  "Korkut",
+  "Malazgirt",
+  "Muş",
+  "Varto"
+]
+},
+{
+  city:"Nevşehir",
+    state:[
+  "Acıgöl",
+  "Avanos",
+  "Derinkuyu",
+  "Gülşehir",
+  "Hacıbektaş",
+  "Kozaklı",
+  "Nevşehir",
+  "Ürgüp"
+]
+},
+{
+  city:"Niğde",
+    state:[
+  "Altunhisar",
+  "Bor",
+  "Çamardı",
+  "Çiftlik",
+  "Niğde",
+  "Ulukışla"
+]
+},
+{
+  city:"Ordu",
+    state:[
+  "Akkuş",
+  "Altınordu",
+  "Aybastı",
+  "Çamaş",
+  "Çatalpınar",
+  "Çaybaşı",
+  "Fatsa",
+  "Gölköy",
+  "Gülyalı",
+  "Gürgentepe",
+  "İkizce",
+  "Kabadüz",
+  "Kabataş",
+  "Korgan",
+  "Kumru",
+  "Mesudiye",
+  "Perşembe",
+  "Ulubey",
+  "Ünye"
+]
+},
+{
+  city:"Osmaniye",
+    state:[
+  "Bahçe",
+  "Düziçi",
+  "Hasanbeyli",
+  "Kadirli",
+  "Osmaniye",
+  "Sumbas",
+  "Toprakkale"
+]
+},
+{
+  city:"Rize",
+    state:[
+  "Ardeşen",
+  "Çamlıhemşin",
+  "Çayeli",
+  "Derepazarı",
+  "Fındıklı",
+  "Güneysu",
+  "Hemşin",
+  "İkizdere",
+  "İyidere",
+  "Kalkandere",
+  "Pazar",
+  "Rize"
+]
+},
+{
+  city:"Sakarya",
+    state:[
+  "Adapazarı",
+  "Akyazı",
+  "Arifiye",
+  "Erenler",
+  "Ferizli",
+  "Geyve",
+  "Hendek",
+  "Karapürçek",
+  "Karasu",
+  "Kaynarca",
+  "Kocaali",
+  "Pamukova",
+  "Sapanca",
+  "Serdivan",
+  "Söğütlü",
+  "Taraklı"
+]
+},
+{
+  city:"Samsun",
+    state:[
+  "Alaçam",
+  "Asarcık",
+  "Atakum",
+  "Ayvacık",
+  "Bafra",
+  "Canik",
+  "Çarşamba",
+  "Havza",
+  "İlkadım",
+  "Kavak",
+  "Ladik",
+  "Ondokuzmayıs",
+  "Salıpazarı",
+  "Tekkeköy",
+  "Terme",
+  "Vezirköprü",
+  "Yakakent"
+]
+},
+{
+  city:"Siirt",
+    state:[
+  "Siirt",
+  "Tillo",
+  "Baykan",
+  "Eruh",
+  "Kurtalan",
+  "Pervari",
+  "Şirvan"
+]
+},
+{
+  city:"Sinop",
+    state:[
+  "Ayancık",
+  "Boyabat",
+  "Dikmen",
+  "Durağan",
+  "Erfelek",
+  "Gerze",
+  "Saraydüzü",
+  "Sinop",
+  "Türkeli"
+]
+},
+{
+  city:"Sivas",
+    state:[
+  "Akıncılar",
+  "Altınyayla",
+  "Divriği",
+  "Doğanşar",
+  "Gemerek",
+  "Gölova",
+  "Hafik",
+  "İmranlı",
+  "Kangal",
+  "Koyulhisar",
+  "Sivas",
+  "Suşehri",
+  "Şarkışla",
+  "Ulaş",
+  "Yıldızeli",
+  "Zara",
+  "Gürün"
+]
+},
+{
+  city:"Şanlıurfa",
+    state:[
+  "Akçakale",
+  "Birecik",
+  "Bozova",
+  "Ceylanpınar",
+  "Eyyübiye",
+  "Halfeti",
+  "Haliliye",
+  "Harran",
+  "Hilvan",
+  "Karaköprü",
+  "Siverek",
+  "Suruç",
+  "Viranşehir"
+]
+},
+{
+  city:"Şırnak",
+    state:[
+  "Beytüşşebap",
+  "Cizre",
+  "Güçlükonak",
+  "İdil",
+  "Silopi",
+  "Şırnak",
+  "Uludere"
+]
+},
+{
+  city:"Tekirdağ",
+    state:[
+  "Çerkezköy",
+  "Çorlu",
+  "Ergene",
+  "Hayrabolu",
+  "Kapaklı",
+  "Malkara",
+  "Marmara Ereğlisi",
+  "Muratlı",
+  "Saray",
+  "Süleymanpaşa",
+  "Şarköy"
+]
+},
+{
+  city:"Tokat",
+    state:[
+  "Almus",
+  "Artova",
+  "Başçiftlik",
+  "Erbaa",
+  "Niksar",
+  "Pazar",
+  "Reşadiye",
+  "Sulusaray",
+  "Tokat",
+  "Turhal",
+  "Yeşilyurt",
+  "Zile"
+]
+},
+{
+  city:"Trabzon",
+    state:[
+  "Akçaabat",
+  "Araklı",
+  "Arsin",
+  "Beşikdüzü",
+  "Çarşıbaşı",
+  "Çaykara",
+  "Dernekpazarı",
+  "Düzköy",
+  "Hayrat",
+  "Köprübaşı",
+  "Maçka",
+  "Of",
+  "Ortahisar",
+  "Sürmene",
+  "Şalpazarı",
+  "Tonya",
+  "Vakfıkebir",
+  "Yomra"
+]
+},
+{
+  city:"Tunceli",
+    state:[
+  "Çemişgezek",
+  "Hozat",
+  "Mazgirt",
+  "Nazımiye",
+  "Ovacık",
+  "Pertek",
+  "Pülümür",
+  "Tunceli"
+]
+},
+{
+  city:"Uşak",
+    state:[
+  "Banaz",
+  "Eşme",
+  "Karahallı",
+  "Sivaslı",
+  "Ulubey",
+  "Uşak"
+]
+},
+{
+  city:"Van",
+    state:[
+  "Bahçesaray",
+  "Başkale",
+  "Çaldıran",
+  "Çatak",
+  "Edremit",
+  "Erciş",
+  "Gevaş",
+  "Gürpınar",
+  "İpekyolu",
+  "Muradiye",
+  "Özalp",
+  "Saray",
+  "Tuşba"
+]
+},
+{
+  city:"Yalova",
+    state:[
+  "Altınova",
+  "Armutlu",
+  "Çınarcık",
+  "Çiftlikköy",
+  "Termal",
+  "Yalova"
+]
+},
+{
+  city:"Yozgat",
+    state:[
+  "Akdağmadeni",
+  "Aydıncık",
+  "Boğazlıyan",
+  "Çandır",
+  "Çayıralan",
+  "Çekerek",
+  "Kadışehri",
+  "Saraykent",
+  "Sarıkaya",
+  "Sorgun",
+  "Şefaatli",
+  "Yenifakılı",
+  "Yerköy",
+  "Yozgat"
+]
+},
+{
+  city:"Zonguldak",
+    state:[
+  "Alaplı",
+  "Çaycuma",
+  "Devrek",
+  "Gökçebey",
+  "Kilimli",
+  "Kozlu",
+  "Karadeniz Ereğli",
+  "Zonguldak"
+]
+}
+];
+export default cities;

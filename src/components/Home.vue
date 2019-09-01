@@ -1,5 +1,8 @@
 <template>
+  <div>
     <sidebar/>
+  <p>ASDASD</p>
+  </div>
 </template>
 
 <script>

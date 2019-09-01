@@ -10,6 +10,7 @@ import Cart from '@/components/Cart'
 import Bills from '@/components/Bills'
 import Home from '@/components/Home'
 import Users from '@/components/Users'
+import RegisterPage from '@/components/RegisterPage'
 import { Role } from '../helpers/Role'
 
 Vue.use(Router)
@@ -46,7 +47,7 @@ export const router = new Router({
       path: '/product/create',
       name: 'CreateProduct',
       component: CreateProduct,
-      meta: {authorize: [Role.Saler]}
+      meta: {authorize: [Role.Merchant]}
     },
     {
       path: '/category/:id',
@@ -76,6 +77,11 @@ export const router = new Router({
       path: '/login',
       component: LoginPage
     },
+    {
+      path: '/register/:type',
+      component: RegisterPage,
+      props: true
+    },
 
     // otherwise redirect to home
     { path: '*', redirect: '/' }
@@ -84,7 +90,7 @@ export const router = new Router({
 
 router.beforeEach((to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
-  const publicPages = ['/login'];
+  const publicPages = ['/login','/register/merchant','/register/customer'];
   const authRequired = !publicPages.includes(to.path);
   const loggedIn = JSON.parse(localStorage.getItem('user'));
   const { authorize } = to.meta;
