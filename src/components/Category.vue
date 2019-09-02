@@ -27,7 +27,7 @@
         }
       },
       mounted() {
-        this.photoUrl = `${apiService.getURL()}/photos/category/${this.category.id}`;
+        this.photoUrl = `${apiService.getURL()}/photos/${this.category.photoUrl}`;
       },
       methods:{
         deleteCategory(id){

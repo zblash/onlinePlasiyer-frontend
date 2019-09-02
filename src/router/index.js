@@ -8,6 +8,8 @@ import GetProducts from '@/components/GetProducts'
 import LoginPage from '@/components/LoginPage'
 import Cart from '@/components/Cart'
 import Bills from '@/components/Bills'
+import AddUser from '@/components/AddUser'
+import AddActiveState from '@/components/AddActiveState'
 import Home from '@/components/Home'
 import Users from '@/components/Users'
 import RegisterPage from '@/components/RegisterPage'
@@ -38,15 +40,28 @@ export const router = new Router({
       meta: {authorize: [Role.Admin]}
     },
     {
-      path: '/admin/users',
+      path: '/admin/users/:type',
       name: 'Users',
       component: Users,
+      props: true,
+      meta: {authorize: [Role.Admin]}
+    },
+    {
+      path: '/admin/user/add',
+      name: 'AddUser',
+      component: AddUser,
       meta: {authorize: [Role.Admin]}
     },
     {
       path: '/product/create',
       name: 'CreateProduct',
       component: CreateProduct,
+      meta: {authorize: [Role.Merchant]}
+    },
+    {
+      path: '/addstates',
+      name: 'AddActiveState',
+      component: AddActiveState,
       meta: {authorize: [Role.Merchant]}
     },
     {
@@ -75,10 +90,12 @@ export const router = new Router({
     },
     {
       path: '/login',
+      name: 'LoginPage',
       component: LoginPage
     },
     {
       path: '/register/:type',
+      name: 'RegisterPage',
       component: RegisterPage,
       props: true
     },

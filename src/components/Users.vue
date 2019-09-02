@@ -10,8 +10,6 @@
           <th>Isim</th>
           <th>E-mail</th>
           <th>Vergi No.</th>
-          <th>Onayli mi?.</th>
-          <th>Rol</th>
           <th>Islemler</th>
         </tr>
         </thead>
@@ -23,11 +21,9 @@
           <td>{{ user.email }}</td>
           <td>{{ user.taxNumber }}</td>
           <td>
-            <span v-if="user.status">Evet</span>
-            <span v-else>Hayir</span>
+            <button class="btn btn-primary" @click.prevent="changeStatus(true, user.id)" v-if="!user.status">Onayla</button>
+            <button class="btn btn-danger" @click.prevent="changeStatus(false, user.id)" v-else>Engelle</button>
           </td>
-          <td>{{ user.role.name }}</td>
-          <td>{{ user.id }}</td>
         </tr>
         </tbody>
       </table>
@@ -48,12 +44,58 @@
           users: null
         }
       },
-      mounted() {
-        apiService.getAllUsers()
-          .then(response => {
-            this.users = response.data;
-          })
-      }
+      created() {
+       this.fetchData();
+
+      },
+        methods: {
+            fetchData(){
+                console.log(this.$route.params.type)
+                if(this.$route.params.type === "customers"){
+                    apiService.getAllCustomers()
+                        .then(response => {
+                            this.users = response.data;
+                        })
+                }else if (this.$route.params.type === "merchants"){
+                    apiService.getAllMerchants()
+                        .then(response => {
+                            this.users = response.data;
+                        })
+                }else {
+                    apiService.getAllPassiveUsers()
+                        .then(response => {
+                            this.users = response.data;
+                        })
+                }
+            },
+            changeStatus(status,userId){
+                if (!status){
+                    apiService.setPassiveUser(userId)
+                        .then(
+                            response => {
+                              this.fetchData()
+                            },
+                            error => {}
+                        )
+                }else {
+                    apiService.setActiveUser(userId)
+                        .then(
+                            response => {
+                                this.fetchData()
+                            },
+                            error => {}
+                        )
+                }
+            }
+        },
+        watch: {
+            $route(from, to) {
+                if (to.name === 'Users' && from.params.type !== to.params.type) {
+                    console.log(to.params.type)
+                    this.fetchData();
+                }
+            },
+        },
     }
 </script>
 

@@ -22,20 +22,23 @@
                   </div>
                   <form class="user" @submit.prevent="formSubmit">
                     <div class="form-group">
-                      <input type="text" v-model="username" class="form-control form-control-user" id="exampleInputEmail" placeholder="Enter Username...">
+                      <input type="text" v-model="username" class="form-control form-control-user" id="exampleInputEmail" placeholder="Kullanici Adinizi Girin...">
                     </div>
                     <div class="form-group">
-                      <input type="password" v-model="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" v-model="password" class="form-control" id="exampleInputPassword" placeholder="Sifrenizi Girin...">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                        <label class="custom-control-label" for="customCheck">Beni Hatirla</label>
                       </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">
-                      Login
+                      Giris Yap
                     </button>
+                    <router-link :to="{name: 'RegisterPage', params: { type: 'merchant' } }">Toptanci Olarak Kayit Ol</router-link>
+                    <br>
+                    <router-link :to="{name: 'RegisterPage', params: { type: 'customer' } }">Marketci Olarak Kayit Ol</router-link>
                   </form>
 
                 </div>

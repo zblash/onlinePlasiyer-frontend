@@ -25,9 +25,49 @@ export class APIService{
     return axios.post(url, data);
   }
 
-  getAllUsers(){
+  setActiveUser(id){
     let token = authHeader();
-    let url = API_URL+"/admin/users";
+    let url = API_URL+"/users/setActive/"+id;
+    axios.defaults.headers.common = {'Authorization': `${token}`};
+    return axios.post(url);
+  }
+  setPassiveUser(id){
+    let token = authHeader();
+    let url = API_URL+"/users/setPassive/"+id;
+    axios.defaults.headers.common = {'Authorization': `${token}`};
+    return axios.post(url);
+  }
+  addActiveState(data){
+    let token = authHeader();
+    let url = API_URL+"/users/addActiveState";
+    axios.defaults.headers.common = {'Authorization': `${token}`};
+    return axios.post(url,data);
+  }
+
+  getActiveStates(){
+    let token = authHeader();
+    let url = API_URL+"/users/activeStates";
+    axios.defaults.headers.common = {'Authorization': `${token}`};
+    return axios.get(url);
+  }
+
+  getAllCustomers(){
+    let token = authHeader();
+    let url = API_URL+"/users/customers";
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+    return axios.get(url);
+  }
+
+  getAllMerchants(){
+    let token = authHeader();
+    let url = API_URL+"/users/merchant";
+    axios.defaults.headers.common = {'Authorization': `${token}`}
+    return axios.get(url);
+  }
+
+  getAllPassiveUsers(){
+    let token = authHeader();
+    let url = API_URL+"/users/passive";
     axios.defaults.headers.common = {'Authorization': `${token}`}
     return axios.get(url);
   }
@@ -82,7 +122,7 @@ export class APIService{
   getAllCategories(){
     let token = authHeader();
     axios.defaults.headers.common = {'Authorization': `${token}`}
-    let url = API_URL+"/admin/categories";
+    let url = API_URL+"/categories";
     return axios.get(url);
   }
 
@@ -95,7 +135,7 @@ export class APIService{
 
   addCategory(data,img) {
     let token = authHeader();
-    let url = API_URL+"/admin/categories/create";
+    let url = API_URL+"/categories/create";
     axios.defaults.headers.common = {'Authorization': `${token}`}
 
     let form_data = new FormData();

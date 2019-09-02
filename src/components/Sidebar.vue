@@ -11,31 +11,53 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <div style="display: flex" v-if="user.role !== 'ROLE_ADMIN'">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="generalOpsDropdown" role="button" data-toggle="dropdown"
-                 aria-haspopup="true" aria-expanded="false">
-                Genel Islemler
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <router-link :to="{name: 'Bills'}" class="dropdown-item">Faturalar</router-link>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">İşlemler</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                 aria-haspopup="true" aria-expanded="false">
-                Bildirimler
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">okundu</a>
-                <a class="dropdown-item" href="#">Okunmadı</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Hepsi</a>
-              </div>
-            </li>
+          <div style="display: flex" v-if="user.role !== 'ADMIN'">
+            <div v-if="user.role === 'CUSTOMER'">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="generalOpsDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                  Genel Islemler
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <router-link :to="{name: 'Bills'}" class="dropdown-item">Faturalar</router-link>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">İşlemler</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                  Bildirimler
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">okundu</a>
+                  <a class="dropdown-item" href="#">Okunmadı</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Hepsi</a>
+                </div>
+              </li>
+            </div>
+            <div style="display: flex"  v-else>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="generalOpsDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                  Genel Islemler
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <router-link :to="{name: 'Sales'}" class="dropdown-item">Gelen Siparisler</router-link>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                  Ürün Islemleri
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <router-link :to="{name: 'CreateProduct'}" class="dropdown-item">Yeni Ürün Ekle</router-link>
+                </div>
+              </li>
+            </div>
           </div>
           <div style="display: flex" v-else>
             <li class="nav-item dropdown">
@@ -64,8 +86,10 @@
                 Kullanıcı Islemleri
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <router-link :to="{name: 'Users'}" class="dropdown-item">Kullanıcılar</router-link>
-                <router-link :to="{name: 'CreateCategory'}" class="dropdown-item">Kullanıcı Ekle</router-link>
+                <router-link :to="{name: 'Users', params: { type: 'customers' }}" class="dropdown-item">Marketciler</router-link>
+                <router-link :to="{name: 'Users', params: { type: 'merchants' }}" class="dropdown-item">Toptancilar</router-link>
+                <router-link :to="{name: 'Users', params: { type: 'passive' }}" class="dropdown-item">Onay Bekleyenler</router-link>
+                <router-link :to="{name: 'AddUser'}" class="dropdown-item">Kullanıcı Ekle</router-link>
               </div>
             </li>
           </div>
@@ -83,7 +107,7 @@
 
           </li>
 
-          <li v-if="user.role === 'ROLE_CUSTOMER'" class="nav-item">
+          <li v-if="user.role === 'CUSTOMER'" class="nav-item">
             <router-link :to="{name: 'Cart'}" class="nav-link">Sepet( {{ basketQuantity }} )</router-link>
           </li>
           <li class="nav-item">
@@ -98,7 +122,7 @@
 
     <div class="container-fluid"
          style="display: flex; flex-direction: row; flex-wrap:wrap; padding-top: 30px; padding-left: 40px; " >
-     <div v-if="user.role !== 'ROLE_ADMIN'">
+     <div v-if="user.role !== 'ADMIN'">
       <router-link v-for="(category, index) in categories" :to="{name: 'GetProducts', params: { id: category.id } }" :key="`cat-${index}`">
         <div class="card" style="width:5rem; height:130px; margin: 5px;">
           <img class="card-img-top" width="50px" height="80px" src="/static/img/napkin.png" alt="Card image cap">
@@ -133,7 +157,7 @@
     },
     mounted() {
         if (this.user.role === 'MERCHANT' && this.user.activeStates.length < 1){
-            this.$router.push({ name: 'Bills'});
+            this.$router.push({ name: 'AddActiveState'});
         }
       apiService.getCategories()
         .then(response => {
